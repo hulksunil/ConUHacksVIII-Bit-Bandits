@@ -1,0 +1,34 @@
+{
+    "name": "input",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "ec92fa3b-f6fa-4d2a-a52a-233317c1970c",
+            "actions": [
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "7cc21e62-7ccf-43ab-a281-00ec6fd90f24",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5bb0cec9-1368-4418-a1a3-5a7ee29c734c",
+                    "path": "<Keyboard>/k",
+                    "interactions": "Press(pressPoint=1,behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

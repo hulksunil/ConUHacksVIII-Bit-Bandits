@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     private float _timeUntilSpawn;
 
     private List<UnityEngine.Object> _enemies;
-    private const int MAX_ENEMIES = 3;
+    private const int MAX_ENEMIES = 10;
 
     void Start()
     {
