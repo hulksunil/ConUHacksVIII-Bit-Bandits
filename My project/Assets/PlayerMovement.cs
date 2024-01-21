@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
         // -4 is the bottom 
         // 4 is the top
 
-        //Debug.Log(rb.position);
-        if (!(rb.position.x <= -12 || rb.position.y <= -4 || rb.position.y >= 4 || rb.position.x >= 12))
+        Debug.Log(rb.position);
+        if (!(rb.position.x <= -8.5 || rb.position.y <= -4 || rb.position.y >= 4 || rb.position.x >= 8.5))
         {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
             previousPosition = rb.position;
