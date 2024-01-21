@@ -45,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < _enemies.Count; i++)
         {
             // if enemy's x coordinate is less than -12, destroy it
-            if (((GameObject)_enemies[i]).transform.position.x < -12)
+            if (((GameObject)_enemies[i]).transform.position.x < -8.5 - 1)
             {
                 Destroy(_enemies[i]);
                 _enemies.RemoveAt(i);
