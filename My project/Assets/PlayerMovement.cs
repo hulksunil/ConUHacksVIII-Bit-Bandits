@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     Vector2 movement;
     public Vector2 previousPosition;
-    // Update is called once per frame
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 10;// Update is called once per frame
     void Update()
     {
         //Input
@@ -19,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
        movement.x = Input.GetAxisRaw("Horizontal");
        movement.y = Input.GetAxisRaw("Vertical");
        animator.SetFloat("Speed", movement.magnitude);
+
+       if (Input.GetKeyDown(KeyCode.Space)){
+        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.right * bulletSpeed;
+       }
     }
 
     void FixedUpdate(){
@@ -38,5 +46,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.MovePosition(previousPosition);
         }
+   
     }
+    
+
+    
 }
