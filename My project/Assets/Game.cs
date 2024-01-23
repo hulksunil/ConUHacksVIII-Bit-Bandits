@@ -6,6 +6,11 @@ public class Game : MonoBehaviour
 {
     public static Game Instance;
 
+
+
+
+
+
     [SerializeField]
     public int MAX_ENEMIES;
 
