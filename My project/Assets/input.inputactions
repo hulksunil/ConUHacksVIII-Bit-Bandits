@@ -11,7 +11,7 @@
                     "id": "7cc21e62-7ccf-43ab-a281-00ec6fd90f24",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(pressPoint=0.5,behavior=2)",
                     "initialStateCheck": true
                 }
             ],
@@ -20,7 +20,18 @@
                     "name": "",
                     "id": "5bb0cec9-1368-4418-a1a3-5a7ee29c734c",
                     "path": "<Keyboard>/k",
-                    "interactions": "Press(pressPoint=1,behavior=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd81d8b0-3912-484c-aa88-711c6641e7b8",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Fire",
