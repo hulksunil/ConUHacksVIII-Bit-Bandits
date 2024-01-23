@@ -10,7 +10,7 @@ public class Game : MonoBehaviour
     public int MAX_ENEMIES;
 
     public List<UnityEngine.Object> _enemies;
-    public int numEnemiesDestroyed;
+    private int numEnemiesDestroyed;
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +29,16 @@ public class Game : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+
+    public void IncreaseNumEnemiesDestroyed()
+    {
+        numEnemiesDestroyed++;
+    }
+
+    public int getNumEnemiesDestroyed()
+    {
+        return numEnemiesDestroyed;
     }
 }

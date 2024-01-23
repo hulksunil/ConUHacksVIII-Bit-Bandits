@@ -11,9 +11,9 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            Game.Instance.numEnemiesDestroyed++;
+            Game.Instance.IncreaseNumEnemiesDestroyed();
 
-            Debug.Log(Game.Instance.numEnemiesDestroyed + " enemies were shot");
+            Debug.Log(Game.Instance.getNumEnemiesDestroyed() + " enemies were shot");
 
         }
     }
