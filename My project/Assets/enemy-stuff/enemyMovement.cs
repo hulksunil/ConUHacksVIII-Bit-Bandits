@@ -11,11 +11,15 @@ public class enemyMovement : MonoBehaviour
     Vector2 movement;
 
 
-   void Update()
+    void Update()
     {
         //Input
+        movement.x = -1;
 
-       movement.x = -1;
+        if (transform.position.x < -8.5 - 1)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

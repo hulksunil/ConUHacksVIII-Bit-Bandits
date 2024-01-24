@@ -17,11 +17,13 @@ public class EnemySpawner : MonoBehaviour
     private float _timeUntilSpawn;
 
     private List<UnityEngine.Object> _enemies;
-    private const int MAX_ENEMIES = 10;
+    private int MAX_ENEMIES;
 
     void Start()
     {
-        _enemies = new List<UnityEngine.Object>();
+        _enemies = Game.Instance._enemies;
+        MAX_ENEMIES = Game.Instance.MAX_ENEMIES;
+        // _enemies = new List<UnityEngine.Object>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (_timeUntilSpawn <= 0)
         {
-            // limit ememies to 3
+            // limit ememies to MAX_ENEMIES
             if (_enemies.Count < MAX_ENEMIES)
             {
                 // spawn enemy and add it to the list
@@ -41,17 +43,19 @@ public class EnemySpawner : MonoBehaviour
             SetTimeUntilSpawn();
         }
 
-        // loop through enemies and destroy them if they are off screen
-        for (int i = 0; i < _enemies.Count; i++)
-        {
-            // if enemy's x coordinate is less than -12, destroy it
-            if (((GameObject)_enemies[i]).transform.position.x < -8.5 - 1)
-            {
-                Destroy(_enemies[i]);
-                _enemies.RemoveAt(i);
-            }
+        // // loop through enemies and destroy them if they are off screen
+        // for (int i = 0; i < _enemies.Count; i++)
+        // {
+        //     // if enemy's x coordinate is less than -12, destroy it
+        //     if (((GameObject)_enemies[i]).transform.position.x < -8.5 - 1)
+        //     {
+        //         Destroy(_enemies[i]);
 
-        }
+        //         Debug.Log(Game.Instance.MAX_ENEMIES - Game.Instance._enemies.Count + " enemies are left");
+
+        //     }
+
+        // }
 
     }
 
