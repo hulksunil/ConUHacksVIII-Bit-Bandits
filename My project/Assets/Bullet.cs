@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Bullet : MonoBehaviour
 {
+
+    public AudioSource audioSource;
+
+    private void OnStart()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
